@@ -2,46 +2,20 @@ const articles = [{
   id: 1,
   photo: require('../img/photo1.png'),
   type: 'article',
+  amount: '$50,000.00',
+  transactiontype: 'AUTOMATIC PYMT',
+  daynumber: 1,
   time: -300,
   header: 'Plants Of Our Nature',
   text: 'Ferns are a very old group of plants. They first appeared on Earth in the middle Devonian Era about 360 million years ago, just before the Carboniferous Era. Most of the modern fern families we see today first appeared in the Late Cretaceous about 45 or 50 million years ago – during the age of the dinosaurs!',
-  comments: [{
-    id: 1,
-    text: 'Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
-    time: 0,
-  }, {
-    id: 2,
-    text: 'Quisque ut erat. Curabitur gravida nisi at nibh.',
-    time: -311,
-  }, {
-    id: 3,
-    text: 'Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum.',
-    time: -622,
-  }, {
-    id: 4,
-    text: 'In est risus, auctor sed, tristique in, tempus sit amet, sem.',
-    time: -933,
-  }, {
-    id: 5,
-    text: 'In hac habitasse platea dictumst.',
-    time: -1244,
-  }, {
-    id: 6,
-    text: 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
-    time: -1555,
-  }, {
-    id: 7,
-    text: 'Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.',
-    time: -1866,
-  }, {
-    id: 8,
-    text: 'Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.',
-    time: -2177,
-  }],
+  comments: [],
 }, {
   id: 2,
   photo: require('../img/photo2.png'),
   type: 'article',
+  amount: '$50,000.00',
+  transactiontype: 'AUTOMATIC PYMT',
+  daynumber: 1,
   time: -1373,
   header: 'Balloon Trip',
   text: 'Mostly it’s about hot air - for without that balloons are just big empty bags with baskets on the bottom. ' +
@@ -56,6 +30,9 @@ const articles = [{
   id: 3,
   photo: require('../img/photo3.png'),
   type: 'article',
+  amount: '$50,000.00',
+  transactiontype: 'AUTOMATIC PYMT',
+  daynumber: 1,
   time: -2446,
   header: 'Sea World',
   text: 'The worlds oceans cover two thirds of our planet. As we take a dive from the rocks or paddle out from the beach, we are entering a place which is teeming with marine life. ' +
@@ -65,6 +42,9 @@ const articles = [{
   id: 4,
   photo: require('../img/photo4.png'),
   type: 'article',
+  amount: '$50,000.00',
+  transactiontype: 'AUTOMATIC PYMT',
+  daynumber: 1,
   time: -3519,
   header: 'Flowers',
   text: 'Flowers did not always exist; they first appeared 140 million years ago. Before that, ferns and cone bearing trees dominated the earth. ' +
@@ -75,6 +55,9 @@ const articles = [{
   id: 5,
   photo: require('../img/photo5.png'),
   type: 'article',
+  amount: '$50,000.00',
+  transactiontype: 'AUTOMATIC PYMT',
+  daynumber: 1,
   time: -4592,
   header: 'Birds Of Our Planet',
   text: 'Birds have feathers, wings, lay eggs and are warm blooded. There are around 10000 different species of birds worldwide. ' +
@@ -86,6 +69,9 @@ const articles = [{
   id: 6,
   photo: require('../img/photo6.png'),
   type: 'article',
+  amount: '$50,000.00',
+  transactiontype: 'AUTOMATIC PYMT',
+  daynumber: 1,
   time: -5665,
   header: 'Mountains',
   text: 'Mountains make up about one-fifth of the world\'s landscape, and provide homes to at least one-tenth of the world\'s people. ' +

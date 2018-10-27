@@ -20,7 +20,7 @@ export class Articles2 extends React.Component {
     navigation: NavigationType.isRequired,
   };
   static navigationOptions = {
-    title: 'Article List'.toUpperCase(),
+    title: "Michael's Spending",
   };
 
   state = {
@@ -29,38 +29,44 @@ export class Articles2 extends React.Component {
 
   extractItemKey = (item) => `${item.id}`;
 
-  onItemPressed = (item) => {
-    this.props.navigation.navigate('Article', { id: item.id });
-  };
+  calculateDate(daynumber){
+    return '1st Jan 2018 (' + daynumber + ')'
+  }
 
   renderItem = ({ item }) => (
-    <TouchableOpacity
-      delayPressIn={70}
-      activeOpacity={0.8}
-      onPress={() => this.onItemPressed(item)}>
+
       <RkCard rkType='imgBlock' style={styles.card}>
-        <Image rkCardImg source={item.photo} />
-        <View rkCardImgOverlay rkCardContent style={styles.overlay}>
-          <RkText rkType='header4 inverseColor'>{item.header}</RkText>
-          <RkText
-            style={styles.time}
-            rkType='secondary2 inverseColor'>{moment().add(item.time, 'seconds').fromNow()}
-          </RkText>
+        <RkText rkType='header4 inverseColor'>{item.header}</RkText>
+        <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row' }}>
+          <View>
+            <RkText rkType='secondary1'> </RkText>
+          </View>
+          <View style={{ flex: 1, alignSelf: 'stretch' }}>
+            <RkText rkType='secondary1'>{ this.calculateDate(item.daynumber) }</RkText>          
+          </View>
+          <View style={{ flex: 1, alignSelf: 'stretch' }}>
+            <RkText rkType='secondary1'>{ item.transactiontype }</RkText>          
+          </View>
+          <View style={{ flex: 1, alignSelf: 'stretch', color: 'green' }}>
+            <RkText rkType='secondary1'>{ '+ ' + item.amount }</RkText>          
+          </View>
+          <View>
+            <RkText rkType='secondary1'> </RkText>
+          </View>
         </View>
-        <View rkCardFooter>
-          <SocialBar rkType='space' showLabel />
-        </View >
+        <View>
+          <RkText rkType='secondary1'> </RkText>
+        </View>
       </RkCard>
-    </TouchableOpacity>
   );
 
   render = () => (
-    <FlatList
-      data={this.state.data}
-      renderItem={this.renderItem}
-      keyExtractor={this.extractItemKey}
-      style={styles.container}
-    />
+      <FlatList
+        data={this.state.data}
+        renderItem={this.renderItem}
+        keyExtractor={this.extractItemKey}
+        style={styles.container}
+      />
   );
 }
 
