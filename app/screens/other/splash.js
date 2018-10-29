@@ -55,7 +55,8 @@ export class SplashScreen extends React.Component {
       index: 0,
       actions: [NavigationActions.navigate({ routeName: 'Home' })],
     });
-    this.props.navigation.dispatch(toHome);
+    // this.props.navigation.dispatch(toHome);    
+    this.props.navigation.navigate(NavigationActions.navigate({ routeName: 'Articles2' }));
   };
 
   render = () => (
@@ -66,8 +67,8 @@ export class SplashScreen extends React.Component {
           source={require('../../assets/images/splashBack.png')}
         />
         <View style={styles.text}>
-          <RkText rkType='light' style={styles.hero}>React Native</RkText>
-          <RkText rkType='logo' style={styles.appName}>UI Kitten</RkText>
+          <RkText rkType='logo' style={styles.appName}>Wealth</RkText>
+          <RkText rkType='light' style={styles.hero}>Tracker</RkText>
         </View>
       </View>
       <ProgressBar

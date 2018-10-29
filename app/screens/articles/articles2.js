@@ -20,7 +20,7 @@ export class Articles2 extends React.Component {
     navigation: NavigationType.isRequired,
   };
   static navigationOptions = {
-    title: "Michael's Spending",
+    title: " ",
   };
 
   state = {
@@ -33,29 +33,33 @@ export class Articles2 extends React.Component {
     return '1st Jan 2018 (' + daynumber + ')'
   }
 
+  renderHeader = () => {
+    return <View><RkText rkType='header2 center'>{"\nMichael's Spending\n"}</RkText><RkText rkType='header2 center' style={{color: 'green' }}>{"$ 213,043,002.12\n"}</RkText></View>
+  }
+
   renderItem = ({ item }) => (
 
       <RkCard rkType='imgBlock' style={styles.card}>
         <RkText rkType='header4 inverseColor'>{item.header}</RkText>
         <View style={{ flex: 1, alignSelf: 'stretch', flexDirection: 'row' }}>
           <View>
-            <RkText rkType='secondary1'> </RkText>
+            <RkText rkType='primary2'> </RkText>
           </View>
           <View style={{ flex: 1, alignSelf: 'stretch' }}>
-            <RkText rkType='secondary1'>{ this.calculateDate(item.daynumber) }</RkText>          
+            <RkText rkType='primary2'>{ this.calculateDate(item.daynumber) }</RkText>          
           </View>
           <View style={{ flex: 1, alignSelf: 'stretch' }}>
-            <RkText rkType='secondary1'>{ item.transactiontype }</RkText>          
+            <RkText rkType='primary2' style={{ textAlign: 'center' }}>{ item.transactiontype }</RkText>          
           </View>
-          <View style={{ flex: 1, alignSelf: 'stretch', color: 'green' }}>
-            <RkText rkType='secondary1'>{ '+ ' + item.amount }</RkText>          
+          <View style={{ flex: 1, alignSelf: 'flex-end' }}>
+            <RkText rkType='primary2' style={{color: 'green', alignSelf: 'flex-end'}}>{ '+' + item.amount }</RkText>          
           </View>
           <View>
-            <RkText rkType='secondary1'> </RkText>
+            <RkText rkType='primary2'>  </RkText>
           </View>
         </View>
         <View>
-          <RkText rkType='secondary1'> </RkText>
+          <RkText rkType='primary2'> </RkText>
         </View>
       </RkCard>
   );
@@ -66,6 +70,7 @@ export class Articles2 extends React.Component {
         renderItem={this.renderItem}
         keyExtractor={this.extractItemKey}
         style={styles.container}
+        ListHeaderComponent={this.renderHeader}
       />
   );
 }
@@ -77,7 +82,7 @@ const styles = RkStyleSheet.create(theme => ({
     paddingHorizontal: 14,
   },
   card: {
-    marginVertical: 8,
+    marginVertical: 1,
   },
   time: {
     marginTop: 5,
